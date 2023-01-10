@@ -25,6 +25,21 @@ export const createBook = async (req, res) => {
     })
 }
 
+export const updateBook = async (req, res) => {
+
+    const id = +req.params.id
+
+    const { name, description, price } = req.body
+
+    const sql = `UPDATE books SET name = ?, description = ?, price = ? WHERE id = ?;`
+
+    await run(sql, [name, description, price, id])
+    
+    res.status(201).json({
+        message: "Book updated"
+    })
+}
+
 export const deleteBook = async (req, res) => { 
     const id = +req.params.id
 

@@ -3,8 +3,19 @@
 @adminToken = 633a181943c14b6a955410bc856a77a9
 
 GET {{url}}/books
-# Authorization: {{userToken}}
+Authorization: {{userToken}}
 
+###
+
+PUT http://localhost:8080/api/books/1
+Authorization: {{adminToken}}
+Content-Type: application/json
+
+{
+      "name": "O`tkan kunlar",
+      "description": "Abdulla Qodiriy",
+      "price": 100.5
+}
 ###
 
 POST http://localhost:8080/api/books

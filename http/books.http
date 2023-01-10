@@ -1,4 +1,4 @@
-@url = http://localhost:8080/api
+@url = http://193.168.49.23:8080/api
 @userToken = 5080039c1e7379e22830368d0963305e
 @adminToken = 633a181943c14b6a955410bc856a77a9
 
@@ -7,14 +7,14 @@ Authorization: {{userToken}}
 
 ###
 
-PUT http://localhost:8080/api/books/1
+PUT http://193.168.49.23:8080/api/books/1
 Authorization: {{adminToken}}
 Content-Type: application/json
 
 {
       "name": "O`tkan kunlar",
       "description": "Abdulla Qodiriy",
-      "price": 100.5
+      "price": 50
 }
 ###
 

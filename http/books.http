@@ -1,0 +1,23 @@
+@url = http://localhost:8080/api
+@userToken = 5080039c1e7379e22830368d0963305e
+@adminToken = 633a181943c14b6a955410bc856a77a9
+
+GET {{url}}/books
+# Authorization: {{userToken}}
+
+###
+
+POST http://localhost:8080/api/books
+Authorization: {{adminToken}}
+Content-Type: application/json
+
+{
+    "name": "Ikki project orasi",
+    "description": "Farrux Nazarov",
+    "price": 95.3
+}
+
+###
+
+DELETE http://localhost:8080/api/books/5
+Authorization: {{adminToken}}

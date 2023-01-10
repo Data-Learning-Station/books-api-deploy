@@ -1,0 +1,18 @@
+@url = http://localhost:8080/api
+@userToken = 5080039c1e7379e22830368d0963305e
+
+###
+
+POST {{url}}/order
+Content-Type: application/json
+Authorization: {{userToken}}
+
+{
+    "bookId": 6,
+    "count": 1
+}
+
+###
+
+GET {{url}}/order
+Authorization: {{userToken}}

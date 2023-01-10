@@ -1,0 +1,19 @@
+POST http://localhost:8080/api/register 
+Content-Type: application/json
+
+{
+    "username": "fozilbek",
+    "password": "fozilbek2008",
+    "name": "Fozilbek",
+    "surname": "Odamboev"
+}
+
+###
+
+POST http://193.168.49.23:8080/api/login 
+Content-Type: application/json
+
+{
+    "username": "fozilbek",
+    "password": "fozilbek2008"
+}

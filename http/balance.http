@@ -1,0 +1,15 @@
+@url = http://localhost:8080/api
+@userToken = 5080039c1e7379e22830368d0963305e
+
+GET {{url}}/account/balance
+Authorization: {{userToken}}
+
+### 
+
+POST {{url}}/account/top-up
+Authorization: {{userToken}}
+Content-Type: application/json
+
+{
+    "amount": 50
+}

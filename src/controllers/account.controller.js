@@ -10,6 +10,17 @@ export const getBalance = (req, res) => {
     })
 }
 
+export const getAccount = (req, res) => {
+    const { username, name, surname, balance } = res.locals.user
+
+    res.json({
+        message: "Retrive account info",
+        account: {
+            username, name, surname, balance
+        }
+    })
+}
+
 /**
  * {
  *  "amount": -10

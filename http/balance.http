@@ -4,6 +4,12 @@
 GET {{url}}/account/balance
 Authorization: {{userToken}}
 
+###
+
+
+GET {{url}}/account
+Authorization: {{userToken}}
+
 ### 
 
 POST {{url}}/account/top-up
